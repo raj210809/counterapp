@@ -12,6 +12,9 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
+  // Current index for the bottom navigation bar
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +24,7 @@ class _CounterScreenState extends State<CounterScreen> {
           BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
             return Text(
               state.counter.toString(),
-              style:const TextStyle(fontSize: 60),
+              style: const TextStyle(fontSize: 60),
             );
           }),
           Row(
@@ -30,16 +33,35 @@ class _CounterScreenState extends State<CounterScreen> {
                 onPressed: () {
                   context.read<CounterBloc>().add(DecrementCounter());
                 },
-                child:const Text('decrement'),
+                child: const Text('decrement'),
               ),
               ElevatedButton(
                 onPressed: () {
                   context.read<CounterBloc>().add(IncrementCounter());
                 },
-                child:const Text('increment'),
+                child: const Text('increment'),
               ),
             ],
           ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        // currentIndex: _currentIndex,
+        // onTap: (index) {
+        //   setState(() {
+        //     _currentIndex = index;
+        //   });
+        //   // Add logic for handling item selection if necessary
+        // },
+        items:const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.code),
+            label: '1010',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.code),
+            label: 'IX',
+            )
         ],
       ),
     );
