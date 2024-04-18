@@ -18,7 +18,9 @@ class _CounterScreenState extends State<CounterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Counter')),
-      body: Column(
+      
+      body:BlocBuilder<CounterBloc , CounterState>(builder: (context, state) 
+      {return Column(
         children: [
           BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
             return Text(
@@ -44,7 +46,7 @@ class _CounterScreenState extends State<CounterScreen> {
           ),
           Switch(value: context.read<CounterBloc>().state.isBinary, onChanged: (value){context.read<CounterBloc>().add(BinaryEvent());})
         ],
-      ),
-    );
+      );}   
+    ));
   }
 }

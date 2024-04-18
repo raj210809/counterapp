@@ -1,7 +1,9 @@
-abstract class BinaryEvent {}
+abstract class BinaryEvent {
+  BinaryEvent();
+}
 
 class IntToBinary extends BinaryEvent {
-  final String integer; 
+  final String integer;
 
-  IntToBinary(this.integer)
+  IntToBinary(this.integer);
 }
