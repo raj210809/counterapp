@@ -1,5 +1,5 @@
-import 'package:counterapp/bloc/counternumber/counterbloc.dart';
-import 'package:counterapp/ui/counternumber/counter_screen.dart';
+import 'package:counterapp/features/counter/bloc/counterbloc.dart';
+import 'package:counterapp/features/counter/counter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
