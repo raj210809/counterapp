@@ -2,5 +2,5 @@
 
 class ConvertedBinary {
   final int binary;
-  ConvertedBinary(this.binary);
+  const ConvertedBinary(this.binary);
 }

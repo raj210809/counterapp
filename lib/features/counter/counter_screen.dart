@@ -12,41 +12,46 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Counter')),
-      
-      body:BlocBuilder<CounterBloc , CounterState>(builder: (context, state) 
-      {return Column(
-        children: [
-          BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
-            return Text(
-              state.counter.toString(),
-              style: const TextStyle(fontSize: 60),
-            );
-          }),
-          Row(
+        appBar: AppBar(
+          title: const Text('Counter'),
+          backgroundColor: Colors.deepPurple,
+        ),
+        body: BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
+          return Column(
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  context.read<CounterBloc>().add(DecrementCounter());
-                },
-                child: const Text('decrement'),
+              BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
+                return Text(
+                  state.counter.toString(),
+                  style: const TextStyle(fontSize: 60),
+                );
+              }),
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<CounterBloc>().add(DecrementCounter());
+                    },
+                    child: const Text('decrement'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<CounterBloc>().add(IncrementCounter());
+                    },
+                    child: const Text('increment'),
+                  ),
+                ],
               ),
-              ElevatedButton(
-                onPressed: () {
-                  context.read<CounterBloc>().add(IncrementCounter());
-                },
-                child: const Text('increment'),
-              ),
+              BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
+                return Text(
+                  state.binary.toString(),
+                  style: const TextStyle(fontSize: 30),
+                );
+              })
             ],
-          ),
-          Switch(value: context.read<CounterBloc>().state.isBinary, onChanged: (value){context.read<CounterBloc>().add(BinaryEvent());})
-        ],
-      );}   
-    ));
+          );
+        }));
   }
 }

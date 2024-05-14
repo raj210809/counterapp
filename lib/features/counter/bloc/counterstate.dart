@@ -1,6 +1,6 @@
 class CounterState {
   final int counter;
-  final bool isBinary;
+  final String binary;
 
-  const CounterState(this.counter, this.isBinary);
+  const CounterState(this.counter,this.binary);
 }
