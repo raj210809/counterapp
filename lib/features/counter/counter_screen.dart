@@ -46,7 +46,7 @@ class _CounterScreenState extends State<CounterScreen> {
               ),
               BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
                 return Text(
-                  state.binary.toString(),
+                  'binary of the counter is : ${state.binary.toString()}',
                   style: const TextStyle(fontSize: 30),
                 );
               })

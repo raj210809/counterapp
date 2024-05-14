@@ -1,6 +1,6 @@
 
+
 import 'package:counterapp/features/binary/binary_sreen.dart';
-import 'package:counterapp/features/binary/bloc/binarybloc.dart';
 import 'package:counterapp/features/counter/counter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +24,7 @@ class _AppState extends State<MyApp> {
       create: (context) => CounterBloc(),
       child: const CounterScreen(),
     ),
-    MyWidget(),
+    BinaryView()
   ];
 
   void onClick(int index) {
