@@ -1,5 +1,5 @@
-import 'package:counterapp/features/binary/bloc/binaryevent.dart';
-import 'package:counterapp/features/binary/bloc/binarystate.dart';
+import 'package:counterapp/features/binaryToInt/bloc/binaryevent.dart';
+import 'package:counterapp/features/binaryToInt/bloc/binarystate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class IntToBinaryBloc extends Bloc<BinaryEvent , ConvertedBinary>{

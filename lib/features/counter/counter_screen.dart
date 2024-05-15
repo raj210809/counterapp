@@ -12,9 +12,6 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-  String _computeBinary(int value) {
-    return value.toRadixString(2);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +21,6 @@ class _CounterScreenState extends State<CounterScreen> {
         backgroundColor: Colors.deepPurple,
       ),
       body: Center(
-        // Wrap the Column with Center widget
         child: BlocBuilder<CounterBloc, CounterState>(
           builder: (context, state) {
             return Column(
@@ -59,7 +55,7 @@ class _CounterScreenState extends State<CounterScreen> {
                 ),
                 const SizedBox(height: 30),
                 Text(
-                  'Binary of the counter is: ${_computeBinary(state.counter)}',
+                  'Binary of the counter is: ${(state.binary)}',
                   style: const TextStyle(fontSize: 30),
                 )
               ],

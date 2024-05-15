@@ -1,8 +1,8 @@
-import 'package:counterapp/features/binary/bloc/binaryevent.dart';
+import 'package:counterapp/features/binaryToInt/bloc/binaryevent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:counterapp/features/binary/bloc/binarybloc.dart';
-import 'package:counterapp/features/binary/bloc/binarystate.dart';
+import 'package:counterapp/features/binaryToInt/bloc/binarybloc.dart';
+import 'package:counterapp/features/binaryToInt/bloc/binarystate.dart';
 
 class BinaryView extends StatelessWidget{
   @override
