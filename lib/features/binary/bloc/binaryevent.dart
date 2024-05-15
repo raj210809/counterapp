@@ -2,7 +2,7 @@ abstract class BinaryEvent {
   BinaryEvent();
 }
 
-class IntToBinary extends BinaryEvent {
+class BinaryToInt extends BinaryEvent {
   final String binaryinput;
-  IntToBinary(this.binaryinput);
+  BinaryToInt(this.binaryinput);
 }

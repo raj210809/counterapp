@@ -1,5 +1,3 @@
-
-
 import 'package:counterapp/features/binary/binary_sreen.dart';
 import 'package:counterapp/features/counter/counter_screen.dart';
 import 'package:flutter/material.dart';
@@ -42,8 +40,8 @@ class _AppState extends State<MyApp> {
           currentIndex: index,
           onTap: onClick,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'counter'),
-            BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'binary')
+            BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Counter'),
+            BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Binary to Number')
           ],
         ),
       ),

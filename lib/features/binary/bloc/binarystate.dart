@@ -1,6 +1,6 @@
 
 
 class ConvertedBinary {
-  final int binary;
-  const ConvertedBinary(this.binary);
+  final int number;
+  const ConvertedBinary(this.number);
 }
